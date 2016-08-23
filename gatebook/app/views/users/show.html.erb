@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<aside>
+    <section>
+        <span>ユーザー</span>
+        <h3><%= @user.name %></h3>
+    </section>
+
+    <section>
+        <span>メールアドレス</span>
+        <h3><%= @user.email %></h3>
+    </section>
+
+    <section>
+        <small><%= link_to 'プロフィールを編集', edit_user_path(@user)%></small>
+    </section>
+
+</aside>
+
+<ul>
+    <%= render @notes %>
+</ul>
