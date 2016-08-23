@@ -7,29 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<header class="navbar">
+  <header class="navbar">
+    <div class="container">
+      <div id="logo">Gatebook</div>
+      <ul class="header-right">
+        <li><%= link_to "トップ", root_path %></li>
+        <li><%= link_to "概要", about_path %></li>
+        <li><%= link_to "新規投稿", new_note_path %></li>
+        <li><%= link_to "投稿一覧", notes_path %></li>
+        <li><%= link_to "ユーザー一覧", users_path %></li>
+      </ul>
+    </div>
+  </header>
+  
   <div class="container">
-    <div id="logo">Gatebook</div>
-    <ul class="header-right">
-      <li><%= link_to "Top", root_path %></li>
-      <li><%= link_to "About", about_path %></li>
-      <li><%= link_to "投稿", new_note_path %></li>
-      <li><%= link_to "一覧", notes_path %>
-    </ul>
-    </div>
-</header>
+    <%= yield %>
+  </div>
 
-<div class="container"><%= yield %></div>
-
-<div class="container">
-  <footer class="footer">
-    <div class="small">
-      &copy; 2015 Progate, Inc.
-    </div>
-  </footer>
-</div>
-
-
+  <div class="container">
+    <footer class="footer">
+      <div class="small">
+        &copy; 2015 Progate, Inc.
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

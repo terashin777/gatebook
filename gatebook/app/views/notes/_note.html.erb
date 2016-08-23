@@ -1,6 +1,8 @@
 <li>
-        <%= note.user.name %>
-        <span class="content">
-            <%= link_to note.title, note_path(note.id) %>
-        </span>
+  <span class="user-name">
+    <%= note.user.name %>
+  </span>
+  <span class="content">
+    <%= link_to note.title, note_path(note.id) %>
+  </span>
 </li>
